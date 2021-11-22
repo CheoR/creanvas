@@ -48,18 +48,26 @@ export const Canvas = () => {
 
   const onMouseMove = (e) => draw(e.pageX, e.pageY);
 
+  const clearCanvas = () => {
+    ctx.current.clearRect(0, 0, ctx.current.canvas.width, ctx.current.canvas.height);
+  };
+
   return (
-    <canvas
-      style={{
-        border: '2px solid black',
-      }}
-      width={window.innerWidth}
-      height={window.innerHeight}
-      ref={canvasRef}
-      onMouseDown={onMouseDown}
-      onMouseUp={onMouseUp}
-      onMouseLeave={onMouseUp}
-      onMouseMove={onMouseMove}
-    />
+    <div>
+      <canvas
+        style={{
+          border: '2px solid black',
+        }}
+        width={window.innerWidth}
+        height={window.innerHeight}
+        ref={canvasRef}
+        onMouseDown={onMouseDown}
+        onMouseUp={onMouseUp}
+        onMouseLeave={onMouseUp}
+        onMouseMove={onMouseMove}
+      />
+      <br />
+      <button type="button" onClick={clearCanvas}>Clear</button>
+    </div>
   );
 };
