@@ -1,8 +1,8 @@
 .canvas {
-  border: 2px solid blue;
+  border: 5px solid blue;
   background: white;
-  width: 640px;
-  height: 425px;
+  width: 80%;
+  height: 50%;
   margin: 0 auto;
   display: block;
 }

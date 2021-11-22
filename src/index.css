@@ -25,10 +25,12 @@ code {
 }
 
 html {
-  background: orange;
+  background: red;
   height: 100vh;
+  width: 100vw;
 }
 body {
   background: lightblue;
   min-height: 100%;
+  width: 100%;
 }
